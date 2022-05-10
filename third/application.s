@@ -1,3 +1,5 @@
+; Follow link bellow to view more information about ncursor
+; https://www.lihaoyi.com/post/BuildyourownCommandLinewithANSIescapecodes.html
 .global _start
 .align 2
 
@@ -48,6 +50,11 @@
 .text
 
     _start:
+        ; output message = Nikita Obydenkov and Konstantin Kozlov
+        ; background black colour = \u001b[40m
+        ; reset for background colour = \u001b[0m
+        ; characters bright blue colour = \u001b[34;1m
+        ; reset for character colour = \u001b[0m
         string_print char_sequence, char_sequence_length
 
         mov X0, 0
